@@ -44,15 +44,15 @@ UAT-NG also incorporates a convenient teaching mode for configuring tests - deve
 
 ## 1. Consistency Verification
 • How can we establish robust consistency between text and single-image/multi-image sequences/videos in UI scenarios?
-1. Runtime detection - while the test executes, we use Gemini 2.5 Flash with a custom system prompt and multi-screenshot-sequence to determine if the app's state deviates from what is expected.
-2. Postprocessing and comparison - after the test completes, we compare its screenshots and actions against previous runs to determine if there have been any regressions or changes.
+1. Runtime detection - while the test executes, we use Gemini 2.5 Flash with a custom engineered system prompt and **multi-screenshot-sequence** to determine if the app's state deviates from what is expected. **We deliver a pass/fail verdict and reason based on the result.**
+2. Postprocessing and comparison - after the test completes, we **compare its screenshots and actions against previous runs** to determine if there have been any regressions or changes. This uses the historical test data to effectively check consistency and produces a concise comparison for users.
 
 ![](https://i.imgur.com/pPTIUGg.png)
 
 ## 2. Exception Detection
 • How can exception detection be used to identify and respond to interruptions?
 1. UI-TARS 1.5 7B is able to respond to some exceptions such as loading screens and popups.
-2. Gemini 2.5 Flash handles more subtle exceptions such as detecting and alerting users to overflowing text and other issues.
+2. Gemini 2.5 Flash handles more subtle exceptions such as detecting and alerting users to overflowing text and other issues, in **single-image-inputs**.
 
 ![https://i.imgur.com/bqKe8zZ.png](https://i.imgur.com/bqKe8zZ.png)
 
