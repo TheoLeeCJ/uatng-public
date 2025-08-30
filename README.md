@@ -4,6 +4,8 @@
 
 This repository contains the files needed to run uat-ng, `npm install` for both frontend and backend, set the LLM API keys in `backend/.env`, and have a MongoDB instance (or set its connection string in `.env` also).
 
+Please refer to PDF file for private demo link.
+
 # Watch the video: https://www.youtube.com/watch?v=PUaEzR5Judg
 
 # Problem Statement: Harnessing MLLM for Next-Generation UI Automation Testing
